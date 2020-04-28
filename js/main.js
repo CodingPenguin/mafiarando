@@ -49,7 +49,14 @@ none of this works bruh.
 
 
 function numPpl() {
-  return document.getElementById("number").value;
+  let number = document.getElementById("number");
+  const val = number.value;
+  document.getElementById("lNum").textContent = "ok " + val + " people are playin'";
+
+  //number.value = "";
+  return val;
+
+
 }
 
 function addNames() {
@@ -63,8 +70,8 @@ function addNames() {
 
     names.push(name.value);
 
-
-
+    name.value = "";
+    name.focus();
 }
 
 var count = 0;
@@ -89,13 +96,6 @@ function assignRoles() {
       } else {
         person.role = "innocent";
       }
-/*      if(roles.length > 1) {
-        person.role = roles[Math.round(Math.random()*roles.length)];
-      } else if (roles.length == 1) {
-        person.role = roles[0];
-      } else {
-        person.role = "innocent";
-      }*/
 
       if(person.role == undefined) {
         person.role = "detective";
@@ -107,6 +107,8 @@ function assignRoles() {
       roles.splice(indexOfRole, 1);
 
       displayRoles(person.name, person.role);
+
+
 
 }
 
