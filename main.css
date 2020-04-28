@@ -2,14 +2,25 @@ html {
   height: auto;
   width: auto;
   text-align: center;
+  margin: 10% auto;
+
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
+body {
+  font-family: Manrope;
 }
 
-label {
-  width: 100%;
+
+.container-fluid {
+  background-color: #ee;
+}
+
+.whoPpl {
+  margin-top: 10%;
+}
+
+li {
+  margin-left: 5%;
+  text-align: left;
+  font-size: 2rem;
 }

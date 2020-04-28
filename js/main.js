@@ -19,27 +19,33 @@ var roles = ["mafia", "detective", "nurse"];
 var names = [];
 
 window.onload = function() {
-  var inputNum = document.getElementById("number");
-  var inputName = document.getElementById("name");
-  inputNum.addEventListener("keyup", enter(event));
-  inputName.addEventListener("keyup", enter(event));
 
   var numBtn = document.getElementById("numBtn");
   var nameBtn = document.getElementById("nameBtn");
 
   numBtn.addEventListener("click", numPpl);
   nameBtn.addEventListener("click", addNames);
-}
 
-function enter(e) {
-  if(event.keycode === 13) {
+/*  var inputNum = document.getElementById("number");
+  var inputName = document.getElementById("name");
+none of this works bruh.
+  inputNum.addEventListener("keyup", function(event) {
     event.preventDefault();
-    document.getElementById("numBtn").click();
-    console.log("it worked!");
-  }
-  console.log("wassup");
-}
+    if(event.keycode === 13) {
+      numBtn.click();
+      console.log("it worked!");
+    }
+  });
+  inputName.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if(event.keycode === 13) {
+      nameBtn.click();
+      console.log("it worked!");
+    }
+  });*/
 
+
+}
 
 
 function numPpl() {
