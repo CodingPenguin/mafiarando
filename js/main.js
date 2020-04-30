@@ -14,6 +14,8 @@ function printList() {
 //if(btn) {
 //  btn.addEventListener("click", printList, false);
 //}
+
+
 var roles = ["mafia", "detective", "nurse"];
 
 var names = [];
@@ -25,6 +27,18 @@ window.onload = function() {
 
   numBtn.addEventListener("click", numPpl);
   nameBtn.addEventListener("click", addNames);
+
+  if(window.screen.width < 1024) {
+      $("#nameBtn").removeClass("btn-small");
+      $("#numBtn").removeClass("btn-small");
+      $("#assign").removeClass("btn-small");
+      $("#nameBtn").addClass("btn-large");
+      $("#numBtn").addClass("btn-large");
+      $("#assign").addClass("btn-large");
+      numBtn.style.fontSize = "x-large";
+      nameBtn.style.fontSize = "x-large";
+      document.getElementById("assign").style.fontSize = "x-large";
+  }
 
   var inputNum = document.getElementById("number");
   var inputName = document.getElementById("name");
