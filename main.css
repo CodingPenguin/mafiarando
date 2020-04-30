@@ -2,7 +2,6 @@ html {
   height: auto;
   width: auto;
   text-align: center;
-  margin: 10% auto;
 
 }
 
@@ -13,6 +12,7 @@ body {
 
 .container-fluid {
   background-color: #ee;
+  margin-top: 5%;
 }
 
 .whoPpl {
@@ -23,4 +23,24 @@ li {
   margin-left: 5%;
   text-align: left;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    height: 100%;
+  }
+  .container-fluid {
+    margin-top: 15%;
+  }
+
+  .title {
+    font-size: 72px;
+    padding-top: 2.5%;
+  }
+
+  h5 {
+    font-size: 36px;
+  }
+
+
 }

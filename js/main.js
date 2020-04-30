@@ -26,9 +26,9 @@ window.onload = function() {
   numBtn.addEventListener("click", numPpl);
   nameBtn.addEventListener("click", addNames);
 
-/*  var inputNum = document.getElementById("number");
+  var inputNum = document.getElementById("number");
   var inputName = document.getElementById("name");
-none of this works bruh.
+/*
   inputNum.addEventListener("keyup", function(event) {
     event.preventDefault();
     if(event.keycode === 13) {
@@ -39,39 +39,46 @@ none of this works bruh.
   inputName.addEventListener("keyup", function(event) {
     event.preventDefault();
     if(event.keycode === 13) {
-      nameBtn.click();
+      addNames();
       console.log("it worked!");
     }
-  });*/
+  });
 
-
+*/
 }
 
 
 function numPpl() {
   let number = document.getElementById("number");
-  const val = number.value;
-  document.getElementById("lNum").textContent = "ok " + val + " people are playin'";
-
-  //number.value = "";
-  return val;
-
+  if(number.value == "") {
+    alert("Please enter a number.");
+    return null;
+  } else {
+    document.getElementById("lNum").textContent = "ok " + number.value + " people are playin'";
+    return number.value;
+  }
 
 }
+
+
 
 function addNames() {
 
     var ul = document.getElementById('listitems');
     var li = document.createElement('li');
     var name = document.getElementById('name');
-    li.appendChild(document.createTextNode(name.value));
-    ul.appendChild(li);
-    li.setAttribute("id", name.value);
+    if(names.length < numPpl()) {
+      li.appendChild(document.createTextNode(name.value));
+      ul.appendChild(li);
+      li.setAttribute("id", name.value);
 
-    names.push(name.value);
+      names.push(name.value);
 
-    name.value = "";
-    name.focus();
+      name.value = "";
+      name.focus();
+    } else {
+      alert("You said there were only " + numPpl() + " playing!")
+    }
 }
 
 var count = 0;
