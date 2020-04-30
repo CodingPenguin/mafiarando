@@ -5,10 +5,25 @@ html {
 
 }
 
+@font-face {
+  font-family: amagro;
+  src: url(fonts/amagro/Amagro-bold.ttf);
+}
+
 body {
   font-family: Manrope;
 }
 
+.title {
+  font-family: amagro, serif;
+}
+button, .btn-small, .btn-large, button:hover, .btn-small:hover, .btn-large:hover {
+  background-color: #37474f !important;
+}
+
+.waves-effect {
+  -webkit-tap-highlight-color: #37474f;
+}
 
 .container-fluid {
   background-color: #ee;
@@ -31,6 +46,12 @@ li {
   }
   .container-fluid {
     margin-top: 15%;
+  }
+
+  .btn-large {
+    margin-top: 5%;
+    padding: auto;
+    width: 100%;
   }
 
   .title {
